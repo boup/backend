@@ -12,6 +12,6 @@ import java.util.Optional;
 @Repository
 public interface LineRepository<Line, Long> {
     Page<Line> findByCityId(Long cityID, Pageable pageable);
-    //Optional<Line> findByIdAndCityID(Long LineID, Long CityID);
+
     Optional<Line> findByLineIDAndCityID(Long LineID,Long cityID);
 }
