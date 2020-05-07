@@ -5,7 +5,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="city")
-public class City {
+public class City extends AuditModel{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,7 +19,7 @@ public class City {
     private String Latitude;
 
 
-    public City() {
+    public City()  {
     }
 
     public City(String cityName, String longitude, String latitude) {

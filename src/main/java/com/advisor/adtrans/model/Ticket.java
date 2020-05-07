@@ -8,7 +8,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="ticket")
-public class Ticket {
+public class Ticket extends AuditModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

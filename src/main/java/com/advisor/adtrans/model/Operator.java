@@ -8,7 +8,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="operator")
-public class Operator {
+public class Operator  extends AuditModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer OperatorID;

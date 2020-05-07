@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Entity
 @Table(name="transcity")
 
-public class TransCity {
+public class TransCity extends AuditModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
