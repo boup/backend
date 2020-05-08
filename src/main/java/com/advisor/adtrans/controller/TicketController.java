@@ -10,11 +10,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.awt.print.Pageable;
+import org.springframework.data.domain.Pageable;
+
 @RestController
 public class TicketController {
 
-    @Autowired
+    @Autowired(required=false)
     private TicketRepository ticketRepository;
 
     @Autowired

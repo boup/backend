@@ -8,12 +8,13 @@ import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.data.domain.Pageable;
 
-import java.awt.print.Pageable;
+//import java.awt.print.Pageable;
 @RestController
 public class LineController {
 
-    @Autowired
+    @Autowired(required=false)
     private LineRepository lineRepository;
 
     @Autowired
@@ -21,8 +22,7 @@ public class LineController {
 
 
     @GetMapping("/city/{cityID}/line")
-    public Page<Line> getAllLineByCityId(@PathVariable(value = "cityID") Long cityID,
-                                         Pageable pageable) {
+    public Page<Line> getAllLineByCityId(@PathVariable(value = "cityID") Long cityID, Pageable pageable) {
         return lineRepository.findByCityId(cityID, pageable);
     }
 
