@@ -12,12 +12,12 @@ public class Ticket extends AuditModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long TicketId;
+    private Long ticketId;
 
     @Column
-    private  String Duration;
+    private  String duration;
     @Column
-    private String TypeofTicket;
+    private String typeofTicket;
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "CityID", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
@@ -30,28 +30,32 @@ public class Ticket extends AuditModel {
 
 
     public Ticket(String duration, String typeofTicket) {
-        Duration = duration;
-        TypeofTicket = typeofTicket;
+        this.duration = duration;
+        this.typeofTicket = typeofTicket;
     }
 
     public Long getTicketId() {
-        return TicketId;
+        return ticketId;
+    }
+
+    public void setTicketId(Long ticketId) {
+        this.ticketId = ticketId;
     }
 
     public String getDuration() {
-        return Duration;
+        return duration;
     }
 
     public void setDuration(String duration) {
-        Duration = duration;
+        this.duration = duration;
     }
 
     public String getTypeofTicket() {
-        return TypeofTicket;
+        return typeofTicket;
     }
 
     public void setTypeofTicket(String typeofTicket) {
-        TypeofTicket = typeofTicket;
+        this.typeofTicket = typeofTicket;
     }
 
     public City getCity() {

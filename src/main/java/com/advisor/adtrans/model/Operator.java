@@ -11,16 +11,16 @@ import javax.persistence.*;
 public class Operator  extends AuditModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer OperatorID;
+    private Integer operatorId;
 
     @Column
-    private String NameOperator;
+    private String nameOperator;
 
     @Column
-    private String Description;
+    private String description;
 
     @Column
-    private String Link;
+    private String link;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "CityID", nullable = false)
@@ -32,43 +32,51 @@ public class Operator  extends AuditModel {
     public Operator() {
     }
 
-    public Operator(String nameOperator, String description, String link, City city) {
-        NameOperator = nameOperator;
-        Description = description;
-        Link = link;
-        this.city = city;
+    public Operator(String nameOperator, String description, String link) {
+        this.nameOperator = nameOperator;
+        this.description = description;
+        this.link = link;
     }
 
-    public Integer getOperatorID() {
-        return OperatorID;
+    public Integer getOperatorId() {
+        return operatorId;
     }
 
-    public void setOperatorID(Integer operatorID) {
-        OperatorID = operatorID;
+    public void setOperatorId(Integer operatorId) {
+        this.operatorId = operatorId;
     }
+
+    //    public Integer getOperatorID() {
+//        return OperatorID;
+//    }
+//
+//    public void setOperatorID(Integer operatorID) {
+//        OperatorID = operatorID;
+//    }
+
 
     public String getNameOperator() {
-        return NameOperator;
+        return nameOperator;
     }
 
     public void setNameOperator(String nameOperator) {
-        NameOperator = nameOperator;
+        this.nameOperator = nameOperator;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
 
     public String getLink() {
-        return Link;
+        return link;
     }
 
     public void setLink(String link) {
-        Link = link;
+        this.link = link;
     }
 
     public City getCity() {

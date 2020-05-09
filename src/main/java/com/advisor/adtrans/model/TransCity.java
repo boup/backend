@@ -13,7 +13,7 @@ public class TransCity extends AuditModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long TransID;
+    private Long transId;
 
     @Column
     private  String link;
@@ -38,8 +38,12 @@ public class TransCity extends AuditModel {
         this.typeoftransport = typeoftransport;
     }
 
-    public Long getTransID() {
-        return TransID;
+    public Long getTransId() {
+        return transId;
+    }
+
+    public void setTransId(Long transId) {
+        this.transId = transId;
     }
 
     public String getLink() {

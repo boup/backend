@@ -9,9 +9,9 @@ public class Stop extends AuditModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  Long StopID;
+    private  Long stopId;
     @Column
-    private String StopName;
+    private String stopName;
 
     @Column
     private  String  typeof;
@@ -20,24 +20,25 @@ public class Stop extends AuditModel {
     }
 
     public Stop(String stopName, String typeof) {
-        StopName = stopName;
+        this.stopName = stopName;
         this.typeof = typeof;
     }
 
-    public Long getStopID() {
-        return StopID;
+    public Long getStopId() {
+        return stopId;
     }
 
-    public void setStopID(Long stopID) {
-        StopID = stopID;
+    public void setStopId(Long stopId) {
+        this.stopId = stopId;
     }
+
 
     public String getStopName() {
-        return StopName;
+        return stopName;
     }
 
     public void setStopName(String stopName) {
-        StopName = stopName;
+        this.stopName = stopName;
     }
 
     public String getTypeof() {
