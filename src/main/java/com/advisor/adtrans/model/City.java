@@ -10,9 +10,9 @@ public class City extends AuditModel{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
     @Column
-    private  String CityName;
+    private  String cityName;
     @Column
     private  String longitude;
 
@@ -33,24 +33,24 @@ public class City extends AuditModel{
     }
 
     public City(String cityName, String longitude, String latitude) {
-        CityName = cityName;
+        cityName = cityName;
         this.longitude = longitude;
         Latitude = latitude;
     }
 
     public Long getId() {
-        return Id;
+        return id;
     }
 //    //public Long getciityID() {
 //        return CityID;
 //    }
 
     public String getCityName() {
-        return CityName;
+        return cityName;
     }
 
     public void setCityName(String cityName) {
-        CityName = cityName;
+        cityName = cityName;
     }
 
     public String getLongitude() {
@@ -70,7 +70,7 @@ public class City extends AuditModel{
     }
 
     public void setId(Long id) {
-        Id = id;
+        id = id;
     }
 //
 //    public Set<Line> getLine() {

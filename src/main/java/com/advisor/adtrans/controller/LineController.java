@@ -35,7 +35,7 @@ public class LineController {
             throw new ResourceNotFoundException("city not found!");
         }
 
-        return lineRepository.findByCityId(cityid);
+        return lineRepository.findByCity_Id(cityid);
     }
 
 //    public Page<Line> getAllLineByCityId(@PathVariable(value = "cityID") Long cityID, Pageable pageable) {

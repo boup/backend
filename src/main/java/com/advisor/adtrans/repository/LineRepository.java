@@ -19,5 +19,5 @@ public interface LineRepository extends JpaRepository<Line,Long> {
 //    Optional<Line> findByIdAndCityId(Long Id,Long cityID);
 
 
-    List<Line> findByCityId(Long cityid);
+    List<Line> findByCity_Id(Long cityid);
 }
