@@ -1,31 +1,30 @@
 -----insert in city table
-insert into city values('Dakar','-17.467686°W','14.716677°N')
+insert into city(city_name,latitude,longitude) values('Dakar','-17.467686°W','14.716677°N')
 
-insert into city values('Saint-Louis','16.4818°W','16.0326°N')
+insert into city(city_name,latitude,longitude) values('Saint-Louis','16.4818°W','16.0326°N')
+insert into city(city_name,latitude,longitude) values('Louga','16.2287° W','15.6142° N')
 
-insert into city values('Louga','16.2287° W','15.6142° N')
+insert into city(city_name,latitude,longitude) values('Thies','16.9359° W','14.7910° N')
 
-insert into city values('Thies','16.9359° W','14.7910° N')
+insert into city(city_name,latitude,longitude) values('Ziguinchor','16.2640° W','12.5641° N')
 
-insert into city values('Ziguinchor','16.2640° W','12.5641° N')
+insert into city(city_name,latitude,longitude) values('Matam','13.2577° W','15.6600° N')
 
-insert into city values('Matam','13.2577° W','15.6600° N')
+insert into city(city_name,latitude,longitude)values('Kaolack',' 16.0758° W','14.1652° N')
 
-insert into city values('Kaolack',' 16.0758° W','14.1652° N')
+insert into city(city_name,latitude,longitude)values('Diourbel','16.2346° W','14.6561° N')
 
-insert into city values('Diourbel','16.2346° W','14.6561° N')
+insert into city(city_name,latitude,longitude) values('Kedougou','12.1747° W','12.5605° N')
 
-insert into city values('Kedougou','12.1747° W','12.5605° N')
+insert into city(city_name,latitude,longitude) values('Kolda','14.9506° W','12.9107° N')
 
-insert into city values('Kolda','14.9506° W','12.9107° N')
+insert into city(city_name,latitude,longitude)values('Tambacounda','13.6710° W','13.7726° N')
 
-insert into city values('Tambacounda','13.6710° W','13.7726° N')
+insert into city(city_name,latitude,longitude) values('Fatick','16.4111° W','14.3390° N')
 
-insert into city values('Fatick','16.4111° W','14.3390° N')
+insert into city(city_name,latitude,longitude) values('Kaffrine','15.5416° W','14.1052° N')
 
-insert into city values('Kaffrine','15.5416° W','14.1052° N')
-
-insert into city values('Sédhiou','15.5562° W','12.7046° N')
+insert into city(city_name,latitude,longitude) values('Sédhiou','15.5562° W','12.7046° N')
 
 ------insert in Line table---
 
@@ -43,15 +42,15 @@ insert into line values('1,4,6,7,8,9,10,13,18,20,23,121,2,5,11,12,15,16A,16B,217
 
 ------table operator-----
 
-insert into operator(description,link,name_operator) values('Public Bus','http://demdikk.com/','Dakar Dem Dikk',1)
+insert into operator(description,link,name_operator,cityid) values('Public Bus','http://demdikk.com/','Dakar Dem Dikk',1)
 
-insert into operator(description,link,name_operator) values('Private Bus','http://aftu-senegal.org/','Aftu',1)
+insert into operator(description,link,name_operator,cityid) values('Private Bus','http://aftu-senegal.org/','Aftu',1)
 
-insert into operator(description,link,name_operator) values('Private Bus/Taxi','https://carrapideprestige.business.site/?utm_source=gmb&utm_medium=referral','Car Rapide transport',1)
+insert into operator(description,link,name_operator,cityid) values('Private Bus/Taxi','https://carrapideprestige.business.site/?utm_source=gmb&utm_medium=referral','Car Rapide transport',1)
 
-insert into operator(description,link,name_operator) values('Private Bus/Taxi','https://courses.rapidosapp.com/','Rapidos Car',1)
+insert into operator(description,link,name_operator,cityid) values('Private Bus/Taxi','https://courses.rapidosapp.com/','Rapidos Car',1)
 
-insert into operator(description,link,name_operator) values('Dakar Dem Dkk','http://demdikk.com/',1)
+insert into operator(description,link,name_operator,cityid) values('Dakar Dem Dkk','http://demdikk.com/',1)
 
 -----table ticket----remark i will add price
 insert into ticket(duration,price,typeof_ticket,cityid) values ('End of section 1',150,'section 1',1)
@@ -62,13 +61,13 @@ insert into ticket(duration,price,typeof_ticket,cityid) values ('End of section 
 insert into ticket(duration,price,typeof_ticket,cityid) values ('End of sous/under section ',100,'sous/under section ',1)
 --insert into ticekt values ('20min',175,'zone1','cityid')
 ----insert into travel bus--
-insert into travelbus(price,link) values(3500,'http://demdikk.com/senegal_dem_dikk/',1)
-insert into travelbus(price,link) values(6000,'http://rapido.com',1)
-insert into travelbus(price,link) values(7000,'http://senegaltours.com',1)
+insert into travelbus(price,link,cityid) values(3500,'http://demdikk.com/senegal_dem_dikk/',1)
+insert into travelbus(price,link,cityid) values(6000,'http://rapido.com',1)
+insert into travelbus(price,link,cityid) values(7000,'http://senegaltours.com',1)
 ---insert table travelfly
-insert into travelfly (price,company) values (70000,'http://edreams.com/flights/dakar-ziguinchor/DKR/ZIG',1)
-insert into travelfly (price,company) values (80000,'http://edreams.com/flights/dakar-ziguinchor/DKR/ZIG',1)
-insert into travelfly (price,company) values (100000,'http://edreams.com/flights/dakar-ziguinchor/DKR/ZIG',1)
+insert into travelfly (price,company,cityid) values (70000,'http://edreams.com/flights/dakar-ziguinchor/DKR/ZIG',1)
+insert into travelfly (price,company,cityid) values (80000,'http://edreams.com/flights/dakar-ziguinchor/DKR/ZIG',1)
+insert into travelfly (price,company,cityid) values (100000,'http://edreams.com/flights/dakar-ziguinchor/DKR/ZIG',1)
 
 -----table  transcity---
 
