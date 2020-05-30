@@ -27,8 +27,8 @@ insert into city(city_name,latitude,longitude) values('Kaffrine','15.5416° W','
 insert into city(city_name,latitude,longitude) values('Sédhiou','15.5562° W','12.7046° N')
 
 ------insert in Line table---
-
-insert into line(link,number,cityid) values('1,4,6,7,8,9,10,13,18,20,23,121,2,5,11,12,15,16A,16B,217,218,219,227,228,232','http://demdikk.com/ligne-13-liberte-5-palais-2/','iddakar')
+insert into line (number,link,cityid) values(1,
+insert into line(link,number,cityid) values(1,4,6,7,8,9,10,13,18,20,23,121,2,5,11,12,15,16A,16B,217,218,219,227,228,232,'http://demdikk.com/ligne-13-liberte-5-palais-2/','iddakar')
 
 insert into line values('1,4,6,7,8,9,10,13,18,20,23,121,2,5,11,12,15,16A,16B,217,218,219,227,228,232','http://demdikk.com/ligne-13-liberte-5-palais-2/','idthies')
 
