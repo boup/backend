@@ -18,5 +18,5 @@ public interface TicketRepository extends JpaRepository<Ticket,Long> {
 //    Page<Ticket> findByCityId(Long cityID, Pageable pageable);
 //    Optional<Ticket> findByIdAndCityId(Long Id, Long cityID);
 
-    List<Ticket> findByCityId(Long cityID);
+    List<Ticket> findByCityId(Long cityid);
 }

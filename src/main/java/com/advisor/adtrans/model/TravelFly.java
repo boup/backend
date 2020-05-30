@@ -7,62 +7,54 @@ import org.hibernate.annotations.OnDeleteAction;
 import javax.persistence.*;
 
 @Entity
-@Table(name="line")
-//public class Line extends AuditModel {
-public class Line {
-
+@Table(name="travelfly")
+//public class TravelFly extends AuditModel {
+public class TravelFly{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  Long lineId;
+    private Long avionId;
 
     @Column
-    private Long number;
+    private  Long price;
     @Column
-    private String link;
-
+    private String company;
     @ManyToOne(fetch = FetchType.LAZY, optional = false, cascade = CascadeType.ALL)
     @JoinColumn(name = "city_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
     private City city;
 
-
-    public Line() {
+    public TravelFly() {
     }
 
-    public Line(Long number, String link) {
-        this.number = number;
-        this.link = link;
+    public TravelFly(Long price, String company) {
+        this.price = price;
+        this.company = company;
     }
 
-    public Long getLineId() {
-        return lineId;
+    public Long getAvionId() {
+        return avionId;
     }
 
-    public void setLineId(Long lineId) {
-        this.lineId = lineId;
+    public void setAvionId(Long avionId) {
+        this.avionId = avionId;
     }
 
-    public Long getNumber() {
-        return number;
+    public Long getPrice() {
+        return price;
     }
 
-    public void setNumber(Long number) {
-        this.number = number;
+    public void setPrice(Long price) {
+        this.price = price;
     }
 
-    public String getLink() {
-        return link;
+    public String getCompany() {
+        return company;
     }
 
-    public void setLink(String link) {
-        this.link = link;
+    public void setCompany(String company) {
+        this.company = company;
     }
-//    //public Long getLineID() {
-//        return LineID;
-//    }
-
-
 
     public City getCity() {
         return city;

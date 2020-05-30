@@ -6,7 +6,8 @@ import java.util.Set;
 
 @Entity
 @Table(name="city")
-public class City extends AuditModel{
+//public class City extends AuditModel{
+public class City {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,7 +18,7 @@ public class City extends AuditModel{
     private  String longitude;
 
     @Column
-    private String Latitude;
+    private String latitude;
 
 
 //    @OneToMany(mappedBy = "city", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
@@ -35,7 +36,7 @@ public class City extends AuditModel{
     public City(String cityName, String longitude, String latitude) {
         cityName = cityName;
         this.longitude = longitude;
-        Latitude = latitude;
+        latitude = latitude;
     }
 
     public Long getId() {
@@ -62,11 +63,11 @@ public class City extends AuditModel{
     }
 
     public String getLatitude() {
-        return Latitude;
+        return latitude;
     }
 
     public void setLatitude(String latitude) {
-        Latitude = latitude;
+        this.latitude = latitude;
     }
 
     public void setId(Long id) {

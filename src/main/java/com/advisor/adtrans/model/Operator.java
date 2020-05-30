@@ -8,10 +8,11 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="operator")
-public class Operator  extends AuditModel {
+//public class Operator  extends AuditModel {
+public class Operator {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer operatorId;
+    private Long operatorId;
 
     @Column
     private String nameOperator;
@@ -22,8 +23,8 @@ public class Operator  extends AuditModel {
     @Column
     private String link;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "CityID", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false, cascade = CascadeType.ALL)
+    @JoinColumn(name = "city_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
     private City city;
@@ -38,11 +39,11 @@ public class Operator  extends AuditModel {
         this.link = link;
     }
 
-    public Integer getOperatorId() {
+    public Long getOperatorId() {
         return operatorId;
     }
 
-    public void setOperatorId(Integer operatorId) {
+    public void setOperatorId(Long operatorId) {
         this.operatorId = operatorId;
     }
 

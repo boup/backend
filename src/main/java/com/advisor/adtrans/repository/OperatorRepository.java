@@ -15,5 +15,5 @@ import java.util.Optional;
 public interface OperatorRepository extends JpaRepository<Operator,Long> {
 //    Page<Operator> findByCityId(Long cityID, Pageable pageable);
 //    Optional<Operator> findByIdAndCityId(Long Id, Long cityID);
-       List<Operator> findByCityId(Long cityId);
+       List<Operator> findByCityId(Long cityid);
 }

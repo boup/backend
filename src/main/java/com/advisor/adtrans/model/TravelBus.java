@@ -7,19 +7,18 @@ import org.hibernate.annotations.OnDeleteAction;
 import javax.persistence.*;
 
 @Entity
-@Table(name="ticket")
-//public class Ticket extends AuditModel {
-public class Ticket{
+@Table(name="travelbus")
+//public class TravelBus  extends AuditModel{
+public class TravelBus{
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long ticketId;
+    private Long busId;
 
     @Column
-    private  String duration;
+    private  Long price;
     @Column
-    private Long price;
-    @Column
-    private String typeofTicket;
+    private String link;
     @ManyToOne(fetch = FetchType.LAZY, optional = false,cascade = CascadeType.ALL)
     @JoinColumn(name = "city_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
@@ -27,30 +26,20 @@ public class Ticket{
     private City city;
 
 
-    public Ticket() {
+    public TravelBus() {
     }
 
-
-    public Ticket(String duration, Long price, String typeofTicket) {
-        this.duration = duration;
+    public TravelBus(Long price, String link) {
         this.price = price;
-        this.typeofTicket = typeofTicket;
+        this.link = link;
     }
 
-    public Long getTicketId() {
-        return ticketId;
+    public Long getBusId() {
+        return busId;
     }
 
-    public void setTicketId(Long ticketId) {
-        this.ticketId = ticketId;
-    }
-
-    public String getDuration() {
-        return duration;
-    }
-
-    public void setDuration(String duration) {
-        this.duration = duration;
+    public void setBusId(Long busId) {
+        this.busId = busId;
     }
 
     public Long getPrice() {
@@ -61,12 +50,12 @@ public class Ticket{
         this.price = price;
     }
 
-    public String getTypeofTicket() {
-        return typeofTicket;
+    public String getLink() {
+        return link;
     }
 
-    public void setTypeofTicket(String typeofTicket) {
-        this.typeofTicket = typeofTicket;
+    public void setLink(String link) {
+        this.link = link;
     }
 
     public City getCity() {
@@ -77,4 +66,3 @@ public class Ticket{
         this.city = city;
     }
 }
-

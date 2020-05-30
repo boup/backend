@@ -9,8 +9,8 @@ import javax.persistence.*;
 @Entity
 @Table(name="transcity")
 
-public class TransCity extends AuditModel {
-
+//public class TransCity extends AuditModel {
+public class TransCity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long transId;
@@ -18,21 +18,21 @@ public class TransCity extends AuditModel {
     @Column
     private  String link;
     @Column
-    private  Integer price;
+    private  Long price;
     //private Integer CityID;
     //private  String departure;
 
     @Column
     private  Enum  typeoftransport;
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "CityID", nullable = false)
+    @JoinColumn(name = "city_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
     private City city;
     public TransCity() {
     }
 
-    public TransCity(String link, Integer price, Enum typeoftransport) {
+    public TransCity(String link, Long price, Enum typeoftransport) {
         this.link = link;
         this.price = price;
         this.typeoftransport = typeoftransport;
@@ -54,11 +54,11 @@ public class TransCity extends AuditModel {
         this.link = link;
     }
 
-    public Integer getPrice() {
+    public Long getPrice() {
         return price;
     }
 
-    public void setPrice(Integer price) {
+    public void setPrice(Long price) {
         this.price = price;
     }
 
