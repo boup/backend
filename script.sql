@@ -1,30 +1,30 @@
 -----insert in city table
-insert into city(city_name,latitude,longitude) values('Dakar','-17.467686°W','14.716677°N')
+insert into city(city_name,latitude,longitude) values('Dakar','-17.467686°W','14.716677°N');
 
-insert into city(city_name,latitude,longitude) values('Saint-Louis','16.4818°W','16.0326°N')
-insert into city(city_name,latitude,longitude) values('Louga','16.2287° W','15.6142° N')
+insert into city(city_name,latitude,longitude) values('Saint-Louis','16.4818°W','16.0326°N');
+insert into city(city_name,latitude,longitude) values('Louga','16.2287° W','15.6142° N');
 
-insert into city(city_name,latitude,longitude) values('Thies','16.9359° W','14.7910° N')
+insert into city(city_name,latitude,longitude) values('Thies','16.9359° W','14.7910° N');
 
-insert into city(city_name,latitude,longitude) values('Ziguinchor','16.2640° W','12.5641° N')
+insert into city(city_name,latitude,longitude) values('Ziguinchor','16.2640° W','12.5641° N');
 
-insert into city(city_name,latitude,longitude) values('Matam','13.2577° W','15.6600° N')
+insert into city(city_name,latitude,longitude) values('Matam','13.2577° W','15.6600° N');
 
-insert into city(city_name,latitude,longitude)values('Kaolack',' 16.0758° W','14.1652° N')
+insert into city(city_name,latitude,longitude)values('Kaolack',' 16.0758° W','14.1652° N');
 
-insert into city(city_name,latitude,longitude)values('Diourbel','16.2346° W','14.6561° N')
+insert into city(city_name,latitude,longitude)values('Diourbel','16.2346° W','14.6561° N');
 
-insert into city(city_name,latitude,longitude) values('Kedougou','12.1747° W','12.5605° N')
+insert into city(city_name,latitude,longitude) values('Kedougou','12.1747° W','12.5605° N');
 
-insert into city(city_name,latitude,longitude) values('Kolda','14.9506° W','12.9107° N')
+insert into city(city_name,latitude,longitude) values('Kolda','14.9506° W','12.9107° N');
 
-insert into city(city_name,latitude,longitude)values('Tambacounda','13.6710° W','13.7726° N')
+insert into city(city_name,latitude,longitude)values('Tambacounda','13.6710° W','13.7726° N');
 
-insert into city(city_name,latitude,longitude) values('Fatick','16.4111° W','14.3390° N')
+insert into city(city_name,latitude,longitude) values('Fatick','16.4111° W','14.3390° N');
 
-insert into city(city_name,latitude,longitude) values('Kaffrine','15.5416° W','14.1052° N')
+insert into city(city_name,latitude,longitude) values('Kaffrine','15.5416° W','14.1052° N');
 
-insert into city(city_name,latitude,longitude) values('Sédhiou','15.5562° W','12.7046° N')
+insert into city(city_name,latitude,longitude) values('Sédhiou','15.5562° W','12.7046° N');
 
 ------insert in Line table---
 insert into line (number,link,cityid) values(1,
